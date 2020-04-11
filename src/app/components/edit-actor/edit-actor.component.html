@@ -1,0 +1,15 @@
+<div class="card" style="width: 18rem; float: left;margin-left: 10px; margin-top: 50px">
+  <img class="card-img-top" [src]="actor.personalData.imgUrl" alt="Image">
+  <div class="card-body">
+    <p class="card-text">{{'Name: ' + actor.name}}</p>
+    <p class="card-text">{{'Surname: ' + actor.surname}}</p>
+    <p class="card-text">{{'City: ' + actor.address.city}}</p>
+    <p class="card-text">{{'Street: ' + actor.address.street}}</p>
+    <p class="card-text" *ngIf="actor.address.zipCode">{{'Zip Code: ' + actor.address.zipCode}}</p>
+    <p class="card-text">{{'Age: ' + actor.personalData.age}}</p>
+    <p class="card-text">{{'Born Year: ' + actor.personalData.bornYear | date}}</p>
+    <a routerLink="/main">
+      <button class="btn btn-warning float-left">Back to Main</button>
+    </a>
+  </div>
+</div>

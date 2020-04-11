@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ActorsService} from '../../services/actors.service';
+import {Actor} from '../../models/Actor';
 
 @Component({
   selector: 'app-main',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  private actorService;
+  actor: Actor[] = [];
+
+  constructor(actorsService: ActorsService) {
+    this.actorService = actorsService;
+  }
 
   ngOnInit() {
+    this.actorService.retrieveAllData().subscribe(value => {
+      this.actor = value;
+    });
   }
 
 }

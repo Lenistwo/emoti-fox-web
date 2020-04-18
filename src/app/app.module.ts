@@ -9,6 +9,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MainComponent } from './components/main/main.component';
 import { DetailsComponent } from './components/details/details.component';
 import { EditActorComponent } from './components/edit-actor/edit-actor.component';
+import { CreateActorComponent } from './components/create-actor/create-actor.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,15 @@ import { EditActorComponent } from './components/edit-actor/edit-actor.component
     FooterComponent,
     MainComponent,
     DetailsComponent,
-    EditActorComponent
+    EditActorComponent,
+    CreateActorComponent
   ],
   imports: [
     BrowserModule,
     RoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActorsService} from '../../services/actors.service';
-import {Actor} from '../../models/Actor';
+import {Actor} from '../../models/actor';
 
 @Component({
   selector: 'app-main',

@@ -1,8 +1,10 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {MainComponent} from '../../components/main/main.component';
 import {DetailsComponent} from '../../components/details/details.component';
+import {CreateActorComponent} from '../../components/create-actor/create-actor.component';
+import {EditActorComponent} from '../../components/edit-actor/edit-actor.component';
 
 export const routes: Routes = [
   {
@@ -12,6 +14,14 @@ export const routes: Routes = [
   {
     path: 'details/:id',
     component: DetailsComponent
+  },
+  {
+    path: 'create',
+    component: CreateActorComponent
+  },
+  {
+    path: 'edit/:id',
+    component: EditActorComponent
   }
 ];
 
@@ -23,4 +33,5 @@ export const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class RoutingModule { }
+export class RoutingModule {
+}

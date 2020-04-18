@@ -1,9 +1,14 @@
 <div class="card" style="width: 18rem; float: left;margin-left: 10px; margin-top: 50px" *ngFor="let actor of actor">
-  <img class="card-img-top" [src]="actor.personalData.imgUrl" alt="Image" >
+  <img class="card-img-top" [src]="actor.personalData.imgUrl" alt="Image">
   <div class="card-body">
     <h5 class="card-title">{{actor.name + ' ' + actor.surname}}</h5>
     <p class="card-text">{{'Age: ' + actor.personalData.age}}</p>
     <p class="card-text">{{'Born Year: ' + actor.personalData.bornYear | date}}</p>
-    <a [routerLink]="['/details', actor.id]"><button class="btn btn-warning float-left">Details</button></a>
+    <a [routerLink]="['/details', actor.id]">
+      <button class="btn btn-warning float-left">Details</button>
+    </a>
+    <a [routerLink]="['/edit', actor.id]">
+      <button class="btn btn-warning float-right">Edit</button>
+    </a>
   </div>
 </div>

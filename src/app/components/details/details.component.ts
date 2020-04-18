@@ -1,8 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {HttpClient} from '@angular/common/http';
 import {ActorsService} from '../../services/actors.service';
-import {Actor} from '../../models/Actor';
+import {Actor} from '../../models/actor';
 
 @Component({
   selector: 'app-details',

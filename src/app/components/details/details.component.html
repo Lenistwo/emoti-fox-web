@@ -1,4 +1,4 @@
-<div class="card" style="width: 18rem; float: left;margin-left: 10px; margin-top: 50px">
+<div class="card" style="width: 18rem; float: left;margin-left: 10px; margin-top: 50px" *ngIf="actor">
   <img class="card-img-top" [src]="actor.personalData.imgUrl" alt="Image">
   <div class="card-body">
     <p class="card-text">{{'Name: ' + actor.name}}</p>

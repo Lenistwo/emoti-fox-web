@@ -1,5 +1,5 @@
-import {Address} from './Address';
-import {PersonalData} from './PersonalData';
+import {Address} from './address';
+import {PersonalData} from './personal-data';
 
 export interface Actor {
   id: string;

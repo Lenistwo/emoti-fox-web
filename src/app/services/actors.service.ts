@@ -1,6 +1,6 @@
 import {Injectable, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Actor} from '../models/Actor';
+import {Actor} from '../models/actor';
 import {Observable} from 'rxjs';
 import {BASE_PATH} from '../components/constants/constants';
 
@@ -24,6 +24,10 @@ export class ActorsService {
   }
 
   updateActor(actor: Actor) {
+    this.client.patch(BASE_PATH, actor).subscribe();
+  }
+
+  saveActor(actor: Actor) {
     this.client.post(BASE_PATH, actor).subscribe();
   }
 }

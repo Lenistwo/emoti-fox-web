@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>What do want to do?</h1>
+<div mat-dialog-actions class="justify-content-between">
+  <a [routerLink]="['/details', selected.id]" (click)="onNoClick()">
+    <button mat-button class="btn btn-warning float-left">Details</button>
+  </a>
+  <a [routerLink]="['/edit', selected.id]"  (click)="onNoClick()">
+    <button mat-button class="btn btn-warning ">Edit</button>
+  </a>
+</div>

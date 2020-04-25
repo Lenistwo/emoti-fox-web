@@ -11,6 +11,11 @@ import { DetailsComponent } from './components/details/details.component';
 import { EditActorComponent } from './components/edit-actor/edit-actor.component';
 import { CreateActorComponent } from './components/create-actor/create-actor.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule, MatCheckboxModule, MatDialogModule, MatIconModule, MatTooltipModule} from '@angular/material';
+import {MatSliderModule} from '@angular/material/slider';
+import { LandingComponent } from './components/landing-component/landing.component';
+import { ModalComponent } from './components/main/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -20,15 +25,25 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MainComponent,
     DetailsComponent,
     EditActorComponent,
-    CreateActorComponent
+    CreateActorComponent,
+    LandingComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
     RoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatCheckboxModule,
+    MatSliderModule,
+    MatButtonModule,
+    MatTooltipModule,
+    MatIconModule,
+    MatDialogModule
   ],
+  entryComponents: [ModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

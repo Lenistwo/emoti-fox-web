@@ -5,6 +5,7 @@ import {MainComponent} from '../../components/main/main.component';
 import {DetailsComponent} from '../../components/details/details.component';
 import {CreateActorComponent} from '../../components/create-actor/create-actor.component';
 import {EditActorComponent} from '../../components/edit-actor/edit-actor.component';
+import {LandingComponent} from '../../components/landing-component/landing.component';
 
 export const routes: Routes = [
   {
@@ -22,6 +23,10 @@ export const routes: Routes = [
   {
     path: 'edit/:id',
     component: EditActorComponent
+  },
+  {
+    path: '',
+    component: LandingComponent
   }
 ];
 

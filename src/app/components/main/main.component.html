@@ -3,11 +3,9 @@
   <img class="card-img-top" [src]="actor.personalData.imgUrl" alt="Image">
   <div class="card-body">
     <h5 class="card-title">{{actor.name + ' ' + actor.surname}}
-      <button mat-flat-button class="float-right" style="background: transparent;">
-        <mat-icon svgIcon="more" aria-hidden="false" aria-label="More" matTooltip="Edit" (click)="onClick(actor)"
-                  style="color: black" class="float-right">
-        </mat-icon>
-      </button>
+      <mat-icon svgIcon="more" aria-hidden="false" aria-label="More" matTooltip="Settings" (click)="onClick(actor)"
+                style="color: black" class="float-right">
+      </mat-icon>
     </h5>
     <p class="card-text">{{'Age: ' + actor.personalData.age}}</p>
     <p class="card-text">{{'Born Year: ' + actor.personalData.bornYear | date}}</p>

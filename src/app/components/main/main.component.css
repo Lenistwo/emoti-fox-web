@@ -2,3 +2,6 @@ img{
   height: 180px;
   width: 286px;
 }
+mat-icon:hover{
+  cursor: pointer;
+}
